@@ -1,0 +1,14 @@
+export const ACCESS_TOKEN_SECRET_KEY = process.env.ACCESS_TOKEN_SECRET || 'test';
+export const REFRESH_TOKEN_SECRET_KEY = process.env.REFRESH_TOKEN_SECRET || 'refresh';
+export const ACCESS_TOKEN_EXPIRY_LIMIT = process.env.ACCESS_TOKEN_EXPIRY || '15m';
+export const REFRESH_TOKEN_EXPIRY_LIMIT = process.env.REFRESH_TOKEN_EXPIRY || '7d';
+export const ALREADY_REGISTERED_ERROR = 'User is already registered.';
+export const USER_NOT_FOUND_ERROR = 'User not found.';
+export const WRONG_PASSWORD_ERROR = 'Invalid credentials';
+export const TOKEN_PROVIDED_ERROR = 'Unauthorized: No token provided';
+export const TOKEN_INVALID_ERROR = 'Unauthorized: Invalid token';
+export const REFRESH_TOKEN_REQUIRED_ERROR = 'Refresh token is required';
+export const REFRESH_TOKEN_INVALID_ERROR = 'Invalid refresh token';
+export const REFRESH_TOKEN_EXPIRED_ERROR = 'Refresh token has expired';
+export const LOGGED_OUT_SUCCESS = 'Logged out successfully';
+export const INTERNAL_SERVER_ERROR = 'Internal server error';
