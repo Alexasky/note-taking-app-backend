@@ -38,16 +38,9 @@ Create a .env file in the project root and add the following:
 - ACCESS_TOKEN_SECRET: Secret key for generating access tokens.
 - REFRESH_TOKEN_SECRET: Secret key for generating refresh tokens.
 ```
-
-### 4️⃣ Set Up Database
-
-Run migrations to set up the database schema:
+### 4️⃣ Start the Server
 ```
-npm run migrate
-```
-### 5️⃣ Start the Server
-```
-npm start
+npm run dev
 ```
 The server will run on http://localhost:5000
 
