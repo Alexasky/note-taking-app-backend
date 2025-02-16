@@ -29,14 +29,14 @@ npm install
 
 Create a .env file in the project root and add the following:
 ```
-- DB_LOGIN: The login username for your PostgreSQL database (default: postgres).
-- DB_PASSWORD: The password for your PostgreSQL database (e.g., site1234).
-- DB_HOST: The host of your PostgreSQL database (default: localhost).
-- DB_PORT: The port on which PostgreSQL is running (default: 5432).
-- DB_AUTHDATABASE: The name of the database to use for authentication (e.g., notes).
-- PORT: The port on which the backend server will run (default: 5000).
-- ACCESS_TOKEN_SECRET: Secret key for generating access tokens.
-- REFRESH_TOKEN_SECRET: Secret key for generating refresh tokens.
+DB_LOGIN: The login username for your PostgreSQL database (default: postgres).
+DB_PASSWORD: The password for your PostgreSQL database (e.g., site1234).
+DB_HOST: The host of your PostgreSQL database (default: localhost).
+DB_PORT: The port on which PostgreSQL is running (default: 5432).
+DB_AUTHDATABASE: The name of the database to use for authentication (e.g., notes).
+PORT: The port on which the backend server will run (default: 5000).
+ACCESS_TOKEN_SECRET: Secret key for generating access tokens.
+REFRESH_TOKEN_SECRET: Secret key for generating refresh tokens.
 ```
 ### 4️⃣ Start the Server
 ```
