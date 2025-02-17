@@ -15,7 +15,7 @@ beforeAll(async () => {
     .post('/api/auth/login')
     .send({ email: 'test@example.com', password: 'password123' });
 
-  authToken = loginRes.body.token;
+  authToken = loginRes.body.accessToken;
 	userId = loginRes.body.user.id;
 
 });
@@ -29,13 +29,13 @@ describe('Notes API Tests', () => {
 
   it('should create a new note', async () => {
     const res = await request(app)
-      .post('/api/note/create')
-      .set('Authorization', `Bearer ${authToken}`)
-      .send({ title: 'Test Note', content: 'This is a test note', userId: userId });
+    .post('/api/note/create')
+    .set('Authorization', `Bearer ${authToken}`)
+    .send({ title: 'Test Note', content: 'This is a test note', userId: userId });
 
     expect(res.statusCode).toBe(201);
     expect(res.body).toHaveProperty('id');
-    noteId = res.body.id; 
+    noteId = res.body.id;
   });
 
   it('should get all notes', async () => {
@@ -71,6 +71,7 @@ describe('Notes API Tests', () => {
       .delete(`/api/note/${noteId}`)
       .set('Authorization', `Bearer ${authToken}`);
 
-    expect(res.statusCode).toBe(204);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.id).toBe(noteId);
   });
 });

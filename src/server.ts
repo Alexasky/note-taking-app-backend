@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import "reflect-metadata";
-import { connectDB } from "./config/typeorm.config";
+import { AppDataSource, connectDB } from "./config/typeorm.config";
 import cors from 'cors';
 import { authRoutes } from "./auth/auth.module";
 import { noteRoutes } from './note/note.module';
@@ -23,6 +23,7 @@ app.use(cors(corsOptions));
 app.use("/api/auth", authRoutes);
 app.use("/api", noteRoutes);
 
+AppDataSource.initialize();
 connectDB();
 
 if (require.main === module) {

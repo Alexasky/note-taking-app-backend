@@ -10,7 +10,7 @@ export class NoteService {
     const { title, content, userId } = dto;
 
     const result = await pool.query(
-      `INSERT INTO notes (title, content, user_id) 
+      `INSERT INTO notes (title, content, "userId") 
        VALUES ($1, $2, $3) RETURNING *`,
       [title, content, userId]
     );
@@ -20,7 +20,7 @@ export class NoteService {
 
   async getAllNotes(userId: number): Promise<Note[]> {
     const result = await pool.query(
-      `SELECT * FROM notes WHERE user_id = $1`,
+      `SELECT * FROM notes WHERE "userId" = $1`,
       [userId]
     );
     return result.rows;
