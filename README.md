@@ -95,3 +95,6 @@ The server will run on http://localhost:5000
 - bcrypt - Password hashing
 
 - dotenv - Environment variables management
+- Jest - Testing framework
+- TypeORM - Database interactions and ORM
+
