@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import "reflect-metadata";
-import { connectDB } from "./config/ormconfig";
+import { connectDB } from "./config/typeorm.config";
 import cors from 'cors';
 import { authRoutes } from "./auth/auth.module";
 import { noteRoutes } from './note/note.module';

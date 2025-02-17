@@ -15,6 +15,7 @@ This is the backend API for the Note-Taking App, built using Node.js, Express, a
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
+
 ```
 git clone https://github.com/Alexasky/note-taking-app-backend.git
 cd note-taking-app-backend
@@ -22,26 +23,43 @@ cd note-taking-app-backend
 ```
 
 ### 2️⃣ Install Dependencies
+
 ```
 npm install
 ```
+
 ### 3️⃣ Set Up Environment Variables
 
 Create a .env file in the project root and add the following:
+
 ```
-DB_LOGIN: The login username for your PostgreSQL database (default: postgres).
-DB_PASSWORD: The password for your PostgreSQL database (e.g., site1234).
-DB_HOST: The host of your PostgreSQL database (default: localhost).
-DB_PORT: The port on which PostgreSQL is running (default: 5432).
-DB_AUTHDATABASE: The name of the database to use for authentication (e.g., notes).
-PORT: The port on which the backend server will run (default: 5000).
-ACCESS_TOKEN_SECRET: Secret key for generating access tokens.
-REFRESH_TOKEN_SECRET: Secret key for generating refresh tokens.
+DB_LOGIN=postgres
+DB_PASSWORD=site1234
+DB_HOST=localhost
+DB_PORT=5432
+DB_AUTHDATABASE=notes
+PORT=5000
+ACCESS_TOKEN_SECRET=test
+REFRESH_TOKEN_SECRET=refresh
+
 ```
-### 4️⃣ Start the Server
+
+### 4️⃣ Set Up Database
+
+```
+Run migrations to set up the database schema:
+
+npm run build
+npm run migration:run
+
+```
+
+### 5️⃣ Start the Server
+
 ```
 npm run dev
 ```
+
 The server will run on http://localhost:5000
 
 ## 📡 API Endpoints

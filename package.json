@@ -6,7 +6,9 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "test": "jest --runInBand",
-    "typeorm": "typeorm"
+    "migration:generate": "npx tsx node_modules/typeorm/cli.js migration:generate ./src/migrations/update-notes-table -d ./src/config/typeorm.config.ts",
+    "migration:run": "npx ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/config/typeorm.config.ts",
+    "migration:revert": "npx ts-node ./node_modules/typeorm/cli.js migration:revert -d /src/config/typeorm.config.ts"
   },
   "keywords": [],
   "author": "",
